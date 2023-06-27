@@ -70,7 +70,7 @@ const cancel = (key) => {
 
 const save = (key) => {
   Object.assign(JsonRealTime.data.filter(JsonRealTime => JsonRealTime.id === key)[0], editableData[key]);
-  axios.post("https://45.32.124.26:1880/api/machinessettings", editableData[key])
+  axios.post("https://103.190.29.168:1880/api/machinessettings", editableData[key])
     .then(response => {
       notification['success']({
         message: 'Success',
